@@ -1,0 +1,107 @@
+
+/*css katmanı*/
+@import url('https://fonts.googleapis.com/css?family=Lemonada|Racing+Sans+One|Special+Elite&subset=latin-ext');
+
+/* font-family: 'Special Elite', cursive;
+font-family: 'Lemonada', cursive;
+font-family: 'Racing Sans One', cursive; */
+
+div{
+    background-color:saddlebrown;
+    font-family: 'Lemonada', cursive;
+    font-size: 20px;
+    color:darkgoldenrod;
+    transition: .2s all ease-in-out;
+    width: 250px;
+    height: 350px;
+    float: left;
+    border: 5px solid #000;
+    border-radius: 0px 40px;
+    /*margin: 10px;*/
+}
+div:hover{
+    background-color: chartreuse;
+    color:black;
+    border-radius: 40px 0px;
+    transform: scale(1.1);
+    transform: rotateZ(2deg)
+}
+div:nth-child(odd){
+    border: 10px solid gold;
+}
+div:nth-child(even){
+    border: 10px solid turquoise;
+}
+span{
+    display: block;
+    font-family: 'Special Elite', cursive;
+}
+h1{
+    font-family: 'Racing Sans One', cursive;
+    font-size: 120px;
+    background-color: chocolate;
+}
+.detay{
+    /* height: 200px; */
+    border: 2px solid red;
+    margin: 20px 30px;
+    padding: 60px;
+}
+span{
+    color:snow;
+}
+
+.onemli > span{
+    color:yellowgreen;
+}
+
+.metin{
+    width: auto;
+    height: auto;
+    padding: 20px;
+    margin:100px;
+    background-color: #ffffff
+}
+
+.metin span{
+    color: #000;
+    font-family: 'Lemonada', cursive;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.metin hover{
+    transform: scale(1.1);
+    transform: rotate(1deg);
+}
+
+.indirim{
+    font-size: 46px !important;
+    text-decoration-line: line-through!important;
+    color: rgba(0, 0, 0, 0.25)!important;
+    font-family: 'Racing Sans One', cursive !important;
+}
+
+.satis{
+    font-size: 50px !important;
+    color: red !important;
+    font-family: 'Racing Sans One', cursive !important; 
+}
+
+a{
+    text-decoration: none;
+    color:red;
+    font-weight: 700;
+}
+
+a:link{
+    color:red;
+    font-weight: bold;
+}
+a:visited{
+    color: rgb(255, 115, 0);
+    font-style: italic;
+}
+a:hover{
+    color: turquoise;
+}
