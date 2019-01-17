@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS - 1</title>
+    <script>
+        // Değişken tipleri
+
+        var degisken = 10;
+        degisken = "Kamil";
+        degisken = 'Kamil';
+        degisken = "Kamil\nFıdıl";
+        degisken = 3.14;
+        degisken = degisken > 10;
+        degisken = ["Elma","Armut","Erik","Karpuz"];
+        degisken.push(3.14);
+        degisken[2] = "Papaz Erik";
+        degisken[10] = "Falan";
+        degisken[11] = null; // Sadece obje ve arraylerde gelir
+        degisken[12] = undefined;
+        degisken[13] = NaN; // Not a Number
+
+        // Obje tanımlama
+
+        var kisi1 = {
+            id: 1,
+            ad: "Kamil",
+            soyad: "Fıdıl"
+        };
+
+        kisi1.telefon = "05123456789"; // Ek property ekleme
+
+        degisken.push(kisi1); // Arrayler farklı tipte değişkenler alabilir.
+
+        var kisi2 = new Object(); // Diğer bir obje tanımlama yöntemi
+
+        kisi2.ad = "Hakkı";
+        kisi2.soyad = "Hakkıloy";
+        kisi2.id = 2;
+
+        var kare = {
+            x:5,
+            alan:function(){
+                return this.x*this.x; // Bir fonksiyon property gibi eklenebilir.
+
+                // Ek bilgi: JS'de method overloading yok.
+            }
+        }
+
+        console.log(degisken);
+        console.log(kisi1);
+        console.log(kisi2);
+        console.log("Karenin alanı: " + kare.alan());
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

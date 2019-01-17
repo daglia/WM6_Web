@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS - 2</title>
+    <link rel="stylesheet" href="../Ders2/bower_components/bootstrap/dist/css/bootstrap.css"/> 
+    <script>
+        // Fonksiyonlar
+        function ilkFonksiyon(a,b) {
+            //return a+b;
+            console.log(a+b);
+        }
+
+        var sonuc = ilkFonksiyon(3,5);
+        if(sonuc != undefined)
+        alert("Fonksiyon cevap döndürmedi."); // C# karşılığı: mbox
+        else
+            console.log(sonuc); // undefined olarak gösterilir.
+
+        var kisi1 = {
+            id:1,
+            ad:"Kamil",
+            not:95
+        };
+        var kisi2 = {
+            id:1,
+            ad:"Hakkı",
+            not:95
+        };
+
+        kisi1 = kisi2;
+        kisi2.not = 75;
+        console.log(kisi1.not); // Reference type
+
+        var dizi1 = [70,60,10];
+        var dizi2 = [10,20,30];
+        
+        dizi1=dizi2;
+        dizi2[1] = 1;
+        console.log(dizi1[1]); // Arrayler de bir objedir.
+
+        // Anonim fonksiyon - Callback function
+        var tipiNe = function (tip) {
+            console.log(typeof(tip));
+        }
+        
+        // Bir object ve array'i birbirinden ayırmak için .length özelliği kullanılabilir. (Objelerde yok)
+        function diziMi(param) {
+            return param.length != undefined;
+        }
+
+        function merhaba() {
+            alert("Merhaba JavaScript!");
+        }
+        function hesapla() {
+            // var sayi1 = parseInt(document.getElementById('sayi1').value);
+            // var sayi2 = parseInt(document.getElementById('sayi2').value); // Elementten alınan değeri int'e çevirmek gerekebilir.
+            // //console.log(sayi1 + sayi2);
+            // document.getElementById("sonuc").value = sayi1+sayi2;
+            // document.getElementById("sonuc2").innerHTML="<b>"+(sayi1+sayi2)+"</b>"; // innerHTML, metinleri HTML özellikleri ile yazdırmaya yarayabilir.
+
+            var inputlar = document.getElementsByClassName("control");
+            var toplam = 0;
+            for (var i = 0; i < inputlar.length; i++) {
+                var element = inputlar[i];
+                if(!element.disabled)
+                toplam += parseInt(element.value);             
+            }            
+            document.getElementById("sonuc2").innerHTML="<b>"+(toplam)+"</b>";
+        }
+
+        function topla() {
+            var toplam = 0;
+            for (var i=0; i < arguments.length; i++) {
+                toplam += arguments[i];                
+            }
+            console.log(toplam)
+        }
+        topla(3,4,5,6,7,8,9);
+
+        // this, bir elementin tetiklendiği satırdır.
+
+        function degistir(sayi) {
+            console.log(sayi);            
+        }
+
+        function uzerinde(kutu) {
+            kutu.style.backgroundColor = "yellow";
+        }
+
+        function disinda(kutu) {
+            kutu.style.backgroundColor = "turquoise";
+        }
+    </script>
+</head>
+<body>
+    <input type = "number" class="control" id="sayi1" value=0 /><br>
+    <input type = "number" class="control" id="sayi2" value=0 /><br>
+    <input type = "number" class="control" id="sonuc" value=0 disabled /><br>
+    <label id="sonuc2"></label><br>
+    <input type = "button" value="Tıkla" class="btn primary btn-lg" onclick='hesapla()'/><br> <!--Tek tırnak-çift tırnak olayına dikkat.-->
+    <input type="range" max="100" min="0" id="aralik" value=0 onchange="degistir(this.value)" />
+
+    <div class="kutu" onmouseover="uzerinde(this)" onmouseout="disinda(this)">
+
+    </div>
+    <style>
+        .kutu{
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+        }
+    </style>
+</body>
+</html>
