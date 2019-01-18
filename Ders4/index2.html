@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery - 1</title>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, unde ut repellat cum reiciendis cupiditate
+        tempore molestiae incidunt ex numquam, dolorum laborum repellendus excepturi voluptates?</p>
+    <p class="yazi">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Facilis iusto sapiente minus itaque
+        velit, optio ipsa
+        eaque corrupti vel, dicta possimus aut culpa aperiam quaerat.</p>
+    <p class="yazi ozel">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolor doloribus eaque, blanditiis
+        sed beatae ratione,
+        veniam suscipit sit perspiciatis est cumque sapiente perferendis commodi ducimus id reiciendis, enim voluptatem
+        ullam inventore vero ab architecto iste.</p>
+    <p id="onemli">Lorem ipsum, dolor sit amet consectetur adipisicing elit. In odit vitae accusantium minus laborum
+        dolorum
+        praesentium cupiditate asperiores obcaecati error quos ut dolor qui optio assumenda libero rem, non ex ad
+        deleniti sint velit! At beatae cumque doloribus itaque, aliquam laboriosam quo maxime voluptates?</p>
+        <input type="button" id="btn" value="Goster" />
+    <script>
+
+        $(".yazi").click(function(){
+            // $(this).fadeOut(500);   
+            console.log(this);
+            this.innerText = "Kamil";
+        });
+
+        $("#btn").click(function(){
+            $("p.yazi.ozel").toggle(500);
+        });
+
+    </script>
+</body>
+
+</html>
