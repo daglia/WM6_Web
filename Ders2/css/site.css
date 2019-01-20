@@ -41,6 +41,17 @@ h1{
     font-size: 120px;
     background-color: chocolate;
 }
+h2{
+    font-family: 'Lemonada', cursive;
+    font-size: 80px;
+    background-color: aquamarine;
+}
+h3{
+    font-family: 'Special Elite', cursive;
+    font-size: 40px;
+    background-color: royalblue;
+    color: aliceblue;
+}
 .detay{
     /* height: 200px; */
     border: 2px solid red;
