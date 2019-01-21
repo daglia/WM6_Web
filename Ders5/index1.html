@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Jquery</title>
+    <link rel="stylesheet" href="../bower_components/bootstrap/dist/css/bootstrap.css" />
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="script/app1.js"></script>
+    <style>
+        .yapildi{
+            text-decoration: line-through;
+        }
+        #liste,#liste2{
+            min-height: 100px;
+            border: 1px solid #000;
+            border-radius: 2px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-6">
+                <div class="text text-center">
+                    <h2>ToDo List</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="row">
+                    <div class="col-7">
+                        <input type="text" class="form-control" id="txtyeni" />
+                    </div>
+                    <div class="col">
+                        <input type="button" class="btn btn-primary btn-block" value="Ekle" id="btnekle">
+                    </div>
+                </div>
+                <br>
+                <div>
+                    <div class="list-group" id="liste">
+                        <button type="button" class="list-group-item list-group-item-action active">
+                            Cras justo odio
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action">Dapibus ac facilisis in</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <input type="text" class="form-control" value="Yapılanlar" disabled />
+                </div>
+                <br>
+                <div class="row">
+                    <div class="col">
+                        <div class="list-group" id="liste2">
+                            <button type="button" class="list-group-item list-group-item-action">
+                                <span>Cras justo odio</span>
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action">
+                                <span class="yapildi">Dapibus ac facilisis in</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
